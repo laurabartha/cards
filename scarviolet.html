@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scarlet Violet Base Set Tracker</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1> Scarlet and Violet Base Set Checklist</h1>
+
+    <ul></ul>
+    <button> Save </button>
+    <script>
+        const cardNames = [
+        "Pineco",
+        "Heracross",
+        "Shroomish",
+        "Breloom",
+        "Cacnea",
+        "Cacturne",
+        "Tropius",
+        "Scatterbug",
+        "Spewpa",
+        "Vivillon",
+        "Skiddo",
+        "Gogoat",
+        "Sprigatito",
+        "Floragato",
+        "Meowscarada",
+        "Tarountula",
+        "Tarountula",
+        "Tarountula",
+        "Spidops ex",
+        "Smoliv",
+        "Smoliv",
+        "Dolliv",
+        "Arboliva",
+        "Toedscool",
+        "Toedscool",
+        "Toedscruel",
+        "Capsakid",
+        "Capsakid",
+        "Scovillain",
+        "Growlithe",
+        "Growlithe",
+        "Arcanine ex",
+        "Hondour",
+        "Houndoom",
+        "Torkoal",
+        "Fuecoco",
+        "Crocalor",
+        "Skeledirge",
+        "Charcadet",
+        "Charcadet",
+        "Armarouge",
+        "Slowpoke",
+        "Slowbro",
+        "Magikarp",
+        "Gyarados ex",
+        "Buizel",
+        "Floatzel",
+        "Alomomola",
+        "Clauncher",
+        "Clawitzer",
+        "Bruxish",
+        "Quaxly",
+        "Quaxwell",
+        "Quaquaval",
+        "Wiglett",
+        "Wiglett",
+        "Wugtrio",
+        "Cetoddle",
+        "Cetoddle",
+        "Cetitan",
+        "Dondozo",
+        "Tatsugiri",
+        "Magnemite",
+        "Mangeton",
+        "Magnezone ex",
+        "Mareep",
+        "Flaaffy",
+        "Pachirisu",
+        "Rotom",
+        "Rotom",
+        "Toxel",
+        "Toxtricity",
+        "Pawmi",
+        "Pawmi",
+        "Pawmo",
+        "Pawmot",
+        "Wattrel",
+        "Wattrel",
+        "Kilowattrel",
+        "Miraidon",
+        "Miraidon ex",
+        "Drowzee",
+        "Hypno",
+        "Ralts",
+        "Kirlia",
+        "Gardevoir ex",
+        "Shuppet",
+        "Banette ex",
+        "Drifloon",
+        "Drifblim",
+        "Flabebe",
+        "Floette",
+        "Florges",
+        "Dedenne",
+        "Dedenne",
+        "Klefki",
+        "Fidough",
+        "Fidough",
+        "Dachsbun",
+        "Flittle",
+        "Flittle",
+        "Flittle",
+        "Espathra",
+        "Greavard",
+        "Greavard",
+        "Houndstone",
+        "Mankey",
+        "Primeape",
+        "Annihilape",
+        "Meditite",
+        "Medicham",
+        "Riolu",
+        "Riolu",
+        "Lucario",
+        "Sandile",
+        "Krokorok",
+        "Krookodile",
+        "Hawlucha",
+        "Silicobra",
+        "Sandaconda",
+        "Stonjourner",
+        "Klawf",
+        "Great Tusk ex",
+        "Koraidon",
+        "Koraidon ex",
+        "Grimer",
+        "Muk",
+        "Seviper",
+        "Spiritomb",
+        "Croagunk",
+        "Toxicroak ex",
+        "Pawniard",
+        "Bisharp",
+        "Kingambit",
+        "Maschiff",
+        "Maschiff",
+        "Mabosstiff",
+        "Bombirdier",
+        "Forretress",
+        "Varoom",
+        "Varoom",
+        "Revavroom",
+        "Iron Treads ex",
+        "Chansey",
+        "Blissey",
+        "Zangoose",
+        "Zangoose",
+        "Starly",
+        "Staravia",
+        "Staraptor",
+        "Skwovet",
+        "Greedent",
+        "Indeedee",
+        "Lechonk",
+        "Lechonk",
+        "Lechonk",
+        "Oinkologne",
+        "Oinkologne ex",
+        "Tandemaus",
+        "Tandemaus",
+        "Maushold",
+        "Squawkabilly",
+        "Cyclizar",
+        "Cyclizar",
+        "Flamigo",
+        "Arven",
+        "Beach Court",
+        "Crushing Hammer",
+        "Defiance Band",
+        "Electric Generator",
+        "Energy Retrieval",
+        "Energy Search",
+        "Energy Switch",
+        "Exp.Share",
+        "Jacq",
+        "Judge",
+        "Katy",
+        "Mesagoza",
+        "Miriam",
+        "Nemona",
+        "Nest Ball",
+        "Pal Pad",
+        "Penny",
+        "Picnic Basket",
+        "Poke Ball",
+        "Pokegear 3.0",
+        "Pokemon Catcher",
+        "Potion",
+        "Professor's Research (Professor Sada)",
+        "Professor's Research (Professor Turo) ",
+        "Rare Candy",
+        "Rock Chestplate",
+        "Rocky Helmet",
+        "Switch",
+        "Team Star Grunt",
+        "Ultra Ball",
+        "Vitality Band",
+        "Youngster",
+        "Illustration Rare Tarountula",
+        "Illustration Rare Dolliv",
+        "Illustration Rare Toedscool",
+        "Illustration Rare Scovillain",
+        "Illustration Rare Armarouge",
+        "Illustration Rare Slowpoke",
+        "Illustration Rare Clauncher",
+        "Illustration Rare Wiglett",
+        "Illustration Rare Dondozo",
+        "Illustration Rare Pachirisu",
+        "Illustration Rare Pawmot",
+        "Illustration Rare Drowzee",
+        "Illustration Rare Ralts",
+        "Illustration Rare Kirlia",
+        "Illustration Rare Fidough",
+        "Illustration Rare Greavard",
+        "Illustration Rare Riolu",
+        "Illustration Rare Sandile",
+        "Illustration Rare Klawf",
+        "Illustration Rare Mabosstiff",
+        "Illustration Rare Bombirdier",
+        "Illustration Rare Kingambit",
+        "Illustration Rare Starly",
+        "Illustration Rare Skwovet",
+        "Full Art Spidops ex",
+        "Full Art Arcanine ex",
+        "Full Art Gyarados ex",
+        "Full Art Magnezone ex",
+        "Full Art Miraidon ex",
+        "Full Art Gardevoir ex",
+        "Full Art Banette ex",
+        "Full Art Great Tusk ex",
+        "Full Art Koraidon ex",
+        "Full Art Toxicroak ex",
+        "Full Art Iron Treads ex",
+        "Full Art Oinkologne ex",
+        "Full ArtArven",
+        "Full Art Jacq",
+        "Full Art Katy",
+        "Full Art Miriam",
+        "Full Art Penny",
+        "Full Art Professor's Research (Professor Sada) ",
+        "Full Art Professor's Research (Professor Turo) ",
+        "Full Art Team Star Grunt",
+        "Special Illustration Rare Spidops ex",
+        "Special Illustration Rare Miraidon ex",
+        "Special Illustration Rare Gardevoir ex",
+        "Special Illustration Rare Great Tusk ex",
+        "Special Illustration Rare Koraidon ex",
+        "Special Illustration Rare Iron Treads ex",
+        "Special Illustration Rare Arven",
+        "Special Illustration Rare Jacq",
+        "Special Illustration Rare Miriam",
+        "Special Illustration Rare Penny",
+        "Gold Etched Hyper Rare Miraidon ex",
+        "Gold Etched Hyper Rare Koraidon ex",
+        "Gold Etched Full Art Nest Ball",
+        "Gold Etched Full Art Rare Candy ",
+        "Hyper Rare Basic Lightning Energy",
+        "Hyper Rare Basic Fighting Energy"
+        ];
+
+        cardNames.forEach((card, index)=> {
+            const list = document.querySelector("ul");
+            let newCard = document.createElement("li");
+            newCard.innerHTML = 
+            `<div class="pokemon">
+                <h3>${index + 1} ${card}</h3>
+                <label for=${card}>Normal</label>
+                <input type="checkbox" id=${card} name=${card}>
+                <label for=${card + "R"}>Reverse</label>
+                <input type="checkbox" id=${card + "R"} name=${card + "R"}>       
+            </div>`;
+
+ 
+            list.append(newCard);
+        });
+
+        const button = document.querySelector("button");
+
+        button.addEventListener("click", () => { 
+            const listOfInputs = document.getElementsByClassName("pokemon");
+
+            let checkedList = []; 
+            let ogListIndex = 0;
+            console.log (listOfInputs);
+
+            for(let card of listOfInputs) {
+                
+
+                const detailedCard = {
+                    name: cardNames[ogListIndex],
+                    statusNormal: card.children[2].checked,
+                    statusReversed: card.children[4].checked
+                }
+
+               
+
+                ogListIndex++; 
+                checkedList.push(detailedCard)
+            }
+
+            // console.log(JSON.stringify(checkedList));
+            saveFile(checkedList)
+
+        })
+
+        async function saveFile(checkedList) {
+            // create a new handle
+            const newHandle = await window.showSaveFilePicker();
+
+            // create a FileSystemWritableFileStream to write to
+            const writableStream = await newHandle.createWritable();
+
+            // write our file
+            await writableStream.write(JSON.stringify(checkedList));
+
+            // close the file and write the contents to disk.
+            await writableStream.close();
+        }
+
+
+</script>
+</body>
+</html>
