@@ -18,10 +18,12 @@
       const open = document.querySelector(".open");
     //   open button
       open.addEventListener("click", async () => {
+        // File opening starting here        
         [fileHandle] = await window.showOpenFilePicker();
         const file = await fileHandle.getFile();
         const contents = await file.text();
         const jsonContents = await JSON.parse(contents);
+        // end file opening         
 
         cardList = jsonContents;
         
@@ -86,6 +88,8 @@
         saveFile(checkedList)
 
     })
+
+    // Actual file saving happening here    
 
     async function saveFile(checkedList) {
         // create a new handle
